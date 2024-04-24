@@ -1,0 +1,25 @@
+.todoList{
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid;
+    width: 350px;
+    margin: 5px auto;
+    padding: 3px;
+    border-radius: 10px;
+}
+
+.addBtn{
+    height: 37px;
+}
+
+.addingCol{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.check{
+    cursor: pointer;
+}

@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
+import { Link } from "react-router-dom";
+import '../styles/weather.css'; 
 
-function Body(){
+function Weatherapp(){
 
     const [city, setCity] = useState('');
     const [currentTemp, setCurrentTemp] = useState('');
@@ -27,24 +29,42 @@ function Body(){
         }
     }
 
+    let inputCity = document.querySelector(".textBox");
+
+    if(inputCity){
+        inputCity.addEventListener("keydown", (event)=>{
+            if(event.key === 'Enter'){
+                clickHandler();
+            }
+        })
+    }
+
     return(
-        <div className='main'>
-            <div className='infoGetter'>
-                <input type="text" placeholder="enter a city name" value={city} onChange={handleInputChange} className='textBox' />
-                <button type="button" onClick={clickHandler}>
-                    <img src='/images/search-icon.png' alt="Search Icon" className='searchIcon'/>
-                </button>
+        <div>
+            <div>
+                <h1>Weather App</h1>
             </div>
-            {showResult && (
+            <Link to='/'><button type='button' className='homebttn'>Home</button></Link>
+            <div className='main'>
+                <div className='infoGetter'>
+                    <input type="text" placeholder="enter a city name" value={city} onChange={handleInputChange} className='textBox' />
+                    <button type="button" onClick={clickHandler}>
+                        <img src='/images/search-icon.png' alt="Search Icon" className='searchIcon'/>
+                    </button>
+                </div>
+                {showResult && (
                 <div className='result'>
                     <div className='tem'><h2>Current Temperature</h2><p className='temps'>{currentTemp}</p></div>
                     <div className='tem'><h2>Feels Like</h2><p className='temps'>{feelsLike}</p></div>
                 </div>
-            )}
-            <div className='error'>{error}</div>
+                )}
+                <div className='error'>{error}</div>
+            </div>
+            <div>
+                <p className="footer">made with ❤️ by <a href="https://github.com/Abayvm">abay</a></p>
+            </div>
         </div>
-
     )
 }
 
-export default Body;
+export default Weatherapp;

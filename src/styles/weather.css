@@ -13,6 +13,7 @@ h1{
 .main{
     height: 70vh;
     border-bottom: 2px solid black;
+    overflow: scroll;
 }
 .infoGetter{
     display: flex;
@@ -22,6 +23,7 @@ h1{
 
 .textBox{
     height: 30px;
+    border-radius: 3px;
 }
 button{
     height: 38px;
