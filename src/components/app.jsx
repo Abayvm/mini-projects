@@ -7,6 +7,7 @@ import {
 import Home from './Home';
 import Weatherapp from './Weatherapp';
 import Todo from './Todo';
+import Memorygame from "./Memorygame";
 
 class App extends React.Component {
     render() {
@@ -17,6 +18,7 @@ class App extends React.Component {
                         <Route path="/" element={<Home />} />
                         <Route path="/weatherapp" element={<Weatherapp />} />
                         <Route path="/todoapp" element={<Todo />} />
+                        <Route path="/memorygame" element={<Memorygame />} />
                     </Routes>
                 </div>
             </Router>

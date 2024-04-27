@@ -10,6 +10,7 @@ class Home extends React.Component {
                 <div className="navBttns main">
                     <Link to="/weatherapp"><button type='button' className="navBttn">Weather App</button></Link>
                     <Link to="/todoapp"><button type='button' className="navBttn">Todo App</button></Link>
+                    <Link to="/memorygame"><button type='button' className="navBttn">Memory Game</button></Link>
                 </div>
                 <footer><p className="footer">made with ❤️ by <a href="https://github.com/Abayvm">abay</a></p></footer>
             </>

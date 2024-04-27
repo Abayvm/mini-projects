@@ -16,7 +16,7 @@ function Weatherapp(){
 
     async function clickHandler() {
         try {
-            const apiKey = `3e49df5ba6e3ef1df7e8995849353ac5`;
+            const apiKey = '3e49df5ba6e3ef1df7e8995849353ac5';
             const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`);
             const data = await response.json();
             setCurrentTemp(`${data.main.temp}°C`);
@@ -58,7 +58,7 @@ function Weatherapp(){
                     <div className='tem'><h2>Feels Like</h2><p className='temps'>{feelsLike}</p></div>
                 </div>
                 )}
-                <div className='error'>{error}</div>
+                {!showResult && (<div className='error'>{error}</div>)}
             </div>
             <div>
                 <p className="footer">made with ❤️ by <a href="https://github.com/Abayvm">abay</a></p>

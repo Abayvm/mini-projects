@@ -1,0 +1,34 @@
+.instruct{
+    height: 300px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* semi-transparent black */
+    color: white;
+    padding: 20px;
+}
+
+.instoContainer{
+    position: relative;
+}
+
+.bttnContainer{
+    position: relative;
+    height: 200px;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+
+.gameFeild{
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
